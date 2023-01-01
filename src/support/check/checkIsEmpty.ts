@@ -1,8 +1,8 @@
 import type { Selector } from 'webdriverio';
 
-import checkContainsAnyText from './checkContainsAnyText';
+import checkContainsAnyText from './checkContainsAnyText.js';
 
-export default (
+export default async (
     elementType: 'button' | 'element',
     element: Selector,
     falseCase: ' not'
@@ -15,5 +15,5 @@ export default (
         newFalseCase = false;
     }
 
-    checkContainsAnyText(elementType, element, newFalseCase);
+    await checkContainsAnyText(elementType, element, newFalseCase);
 };

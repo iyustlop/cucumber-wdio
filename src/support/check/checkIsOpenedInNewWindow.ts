@@ -2,14 +2,13 @@
  * Check if the given URL was opened in a new window
  * @param  {String}   expectedUrl The URL to check for
  */
-/* eslint-disable no-unused-vars */
-export default (expectedUrl: string, obsolete: never) => {
-/* eslint-enable no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default async (expectedUrl: string, obsolete: never) => {
     /**
      * All the current window handles
      * @type {Object}
      */
-    const windowHandles = browser.getWindowHandles();
+    const windowHandles = await browser.getWindowHandles();
 
     expect(windowHandles).not.toHaveLength(
         1,
@@ -30,7 +29,7 @@ export default (expectedUrl: string, obsolete: never) => {
      * Get the URL of the current browser window
      * @type {String}
      */
-    const windowUrl = browser.getUrl();
+    const windowUrl = await browser.getUrl();
 
     expect(windowUrl).toContain(
         expectedUrl,
@@ -38,5 +37,5 @@ export default (expectedUrl: string, obsolete: never) => {
         'The popup has a incorrect getUrl'
     );
 
-    browser.closeWindow();
+    await browser.closeWindow();
 };
