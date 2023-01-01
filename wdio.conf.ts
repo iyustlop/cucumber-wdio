@@ -1,5 +1,9 @@
-import path from 'path';
-import { hooks } from './src/support/hooks';
+import url from 'node:url';
+import path from 'node:path';
+
+import { hooks } from './src/support/hooks.js';
+
+const dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 export const config: WebdriverIO.Config = {
     //
@@ -42,11 +46,11 @@ export const config: WebdriverIO.Config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 5,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
-    // https://docs.saucelabs.com/reference/platforms-configurator
+    // https://docs.saucelabs.com/basics/platform-configurator/
     //
     capabilities: [{
 
@@ -68,8 +72,8 @@ export const config: WebdriverIO.Config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'debug',
-    outputDir: path.join(__dirname, '/logs'),
+    logLevel: 'trace',
+    outputDir: path.join(dirname, '/logs'),
     //
     // Set specific log levels per logger
     // loggers:
@@ -94,7 +98,7 @@ export const config: WebdriverIO.Config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://www.inoreader.com',
+    baseUrl: 'http://localhost:8080',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -177,7 +181,7 @@ export const config: WebdriverIO.Config = {
         // <boolean> add cucumber tags to feature or scenario name
         tagsInTitle: false,
         // <number> timeout for step definitions
-        timeout: 20000,
+        timeout: -1,
     } as WebdriverIO.CucumberOpts,
     ...hooks,
 };

@@ -1,9 +1,9 @@
-import { Selector } from 'webdriverio';
+import type { Selector } from 'webdriverio';
 
 /**
  * Scroll the page to the given element
  * @param  {String}   selector Element selector
  */
-export default (selector: Selector) => {
-    $(selector).scrollIntoView();
+export default async (selector: Selector) => {
+    await $(selector).scrollIntoView();
 };
