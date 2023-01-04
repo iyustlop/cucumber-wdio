@@ -98,7 +98,7 @@ export const config: WebdriverIO.Config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:8080',
+    baseUrl: 'https://www.inoreader.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -164,6 +164,7 @@ export const config: WebdriverIO.Config = {
             './src/steps/given.ts',
             './src/steps/then.ts',
             './src/steps/when.ts',
+            './src/steps/after.ts',
             // Or search a (sub)folder for JS files with a wildcard
             // works since version 1.1 of the wdio-cucumber-framework
             // './src/**/*.js',
