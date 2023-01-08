@@ -14,10 +14,10 @@ Feature:
 
     Examples: 
       | url                         | items |
+      | //*[@title='Casa']          |    16 |
       | //*[@title='flickr-barcos'] |     1 |
       | //*[@title='flickr-motor']  |    18 |
       | //*[@title='Flickr-VW']     |   128 |
-      | //*[@title='Pinterest_T_C'] |    81 |
       | //*[@title='pinterest-ce']  |    37 |
-      | //*[@title='Casa']          |    16 |
+      | //*[@title='Pinterest_T_C'] |    81 |
       | //*[@title='tumblr-Cars']   |     8 |
