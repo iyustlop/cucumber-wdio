@@ -9,15 +9,16 @@ Feature:
     When I add "password" to the inputfield "#user_password"
     When I click on the element "//*[@class='btn btn-primary btn-block']"
     And I pause for 2000ms
+    And I click on the element "#close_banner"
     When I click on the element "<url>"
     And I read "<items>" items at 3000ms
 
     Examples: 
       | url                         | items |
-      | //*[@title='Casa']          |    16 |
-      | //*[@title='flickr-barcos'] |     1 |
-      | //*[@title='flickr-motor']  |    18 |
-      | //*[@title='Flickr-VW']     |   128 |
-      | //*[@title='pinterest-ce']  |    37 |
-      | //*[@title='Pinterest_T_C'] |    81 |
-      | //*[@title='tumblr-Cars']   |     8 |
+      | //*[@title='pinterest-ce']  |    55 |
+      | //*[@title='Pinterest_T_C'] |    85 |
+      | //*[@title='tumblr-Cars']   |    50 |
+      | //*[@title='Casa']          |    30 |
+      | //*[@title='flickr-barcos'] |    10 |
+      | //*[@title='flickr-motor']  |    10 |
+      | //*[@title='Flickr-VW']     |    50 |

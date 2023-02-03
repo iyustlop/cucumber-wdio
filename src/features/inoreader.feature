@@ -16,7 +16,9 @@ Feature:
 
     Examples: 
       | url                            | items |
-      | [data-folderid='pinterest']    |     1 |
-      | [data-folderid='pinterest-t']  |   277 |
-      | [data-folderid='pinterest-s']  |    30 |
-      | [data-folderid='pinterest-ce'] |    28 |
+      | [data-folderid='pinterest']    |   100 |
+      | [data-folderid='pinterest-c']  |   150 |
+      | [data-folderid='pinterest-ce'] |    50 |
+      | [data-folderid='pinterest-s']  |    50 |
+      | [data-folderid='pinterest-t']  |   150 |
+      | [data-folderid='Thumblr']      |   100 |

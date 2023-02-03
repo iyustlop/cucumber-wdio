@@ -12,5 +12,5 @@ Scenario: Read Items in www.inoreader.com
     And I pause for 2000ms
     When I click on the element "[data-folderid='pinterest-c']"
     And I pause for 2000ms
-    And I read "900" items at 1000ms
+    And I read "900" items at 3000ms
 
