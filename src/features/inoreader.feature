@@ -5,10 +5,11 @@ Feature:
 
   Scenario Outline: Read Items in www.inoreader.com
     Given I open the url "https://www.inoreader.com"
-    When I click on the element "#landing_header_login_link"
+    When I click on the element "#sitecontent > header > nav > div.flex.header-btns.order-1.order-xl-3 > a.font-size-16"
+    And I pause for 1000ms
     When I add "iyustlop@gmail.com" to the inputfield "#username"
     When I add "password" to the inputfield "#password"
-    When I click on the element "//*[@id='login_form']/div[5]/button"
+    When I click on the element "[class='btn btn-active btn-lg mb-4 d-block text-center']"
     And I pause for 3000ms
     When I click on the element "<url>"
     And I pause for 2000ms
