@@ -31,7 +31,7 @@ import isVisible from '../support/check/isDisplayed.js';
 import waitFor from '../support/action/waitFor.js';
 import waitForVisible from '../support/action/waitForDisplayed.js';
 import checkIfElementExists from '../support/lib/checkIfElementExists.js';
-import readItems from '../support/action/readItems.ts';
+import readItems from '../support/action/readItems.js';
 
 Then(
     /^I expect that the title is( not)* "([^"]*)?"$/,
